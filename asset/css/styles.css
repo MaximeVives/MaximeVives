@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bar-size: 35px;
+}
+
+@keyframes width-changing {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 100vw;
+    }
+}
+
+
+.bar{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: var(--bar-size);
+    height: var(--bar-size);
+    flex-direction: column;
+}
+
+.bar span{
+    width: 100%;
+    height: calc(calc(var(--bar-size) / 3) - calc(4px + calc(var(--bar-size) / 30)));
+    background-color: black;
+    margin: 2px 0;
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+
+
+
+
+/*Header*/
+/*NAV*/
+
+header{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+header .nav-panel {
+    height: 100vh;
+    width: 0;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    transition: width 0.5s;
+}
+
+
+
+.nav-panel nav ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-panel nav ul li{
+    position: relative;
+    margin: 3rem 0;
+    list-style: none;
+    width: fit-content;
+}
+
+ul li a{
+    font-family: 'Roboto', sans-serif;
+    /*font-weight: bold;*/
+    font-size: 4em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.7);
+    line-height: 1em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+ul li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.7s;
+    border-right: 8px solid white;
+    margin-left: -3px;
+}
+
+ul li a:hover::before{
+    width: 100%;
+}
+
+
+
+.white-bar{
+    background-color: white!important;
+}
+
+
+.off :nth-child(1){
+    transform: rotate(-45deg);
+}
+
+.off :nth-child(2){
+    opacity: 0;
+}
+
+.off :nth-child(3){
+    transform: rotate(45deg);
+}
+
+
+.ending-flex{
+    align-items: center!important;
+}
+
+.active{
+    width: 100vw!important;
+    justify-content: center!important;
+}
+
+
+
+/*===========================================*/
+/*MAIN*/
+
+.content{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+
+/*@media (prefers-color-scheme: dark){*/
+
+/*}*/
+
+/*@media (prefers-color-scheme: light){*/
+
+/*}*/
