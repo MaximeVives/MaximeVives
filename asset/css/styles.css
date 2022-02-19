@@ -147,7 +147,31 @@ ul li a:hover::before{
     height: 100vh;
     width: 100vw;
     background-color: white;
+
 }
+
+.content .library{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-top: 100px;
+}
+
+.content .library .library-item{
+    display: flex;
+    width: 90%;
+    background-color: aqua;
+    border-radius: 10px;
+    height: 250px;
+    margin: 10px auto;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 400px){
+    .content .library{
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
 /*@media (prefers-color-scheme: dark){*/
