@@ -15,9 +15,13 @@ document.querySelector('.bar').addEventListener('click', function (e) {
 
 
     if (document.querySelector(".nav-panel").classList.contains("active")){
-        setTimeout(() => {  document.querySelector(".nav-panel").classList.toggle('ending-flex');}, 330);
+        setTimeout(() => {
+            document.querySelector(".nav-panel").classList.toggle('ending-flex');
+            document.querySelector("body").style.overflow = "initial";
+        }, 330);
     }else{
         document.querySelector(".nav-panel").classList.toggle('ending-flex');
+        document.querySelector("body").style.overflow = "hidden";
     }
     document.querySelector('.nav-panel').classList.toggle('active');
     document.querySelector('.bar').classList.toggle('off');

@@ -52,8 +52,8 @@ header{
     z-index: 100;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    /*width: 100vw;*/
+    /*height: 100vh;*/
 }
 header .nav-panel {
     height: 100vh;
@@ -76,7 +76,7 @@ header .nav-panel {
 
 .nav-panel nav ul li{
     position: relative;
-    margin: 3rem 0;
+    margin: 1.5rem 0;
     list-style: none;
     width: fit-content;
 }
@@ -144,10 +144,7 @@ ul li a:hover::before{
 /*MAIN*/
 
 .content{
-    height: 100vh;
-    width: 100vw;
     background-color: white;
-
 }
 
 .content .library{
