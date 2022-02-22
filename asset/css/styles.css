@@ -160,7 +160,7 @@ ul li a:hover::before{
 .content .library .library-item{
     display: flex;
     width: 90%;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 250px;
     margin: 10px auto;
     gap: 2rem;
@@ -169,7 +169,7 @@ ul li a:hover::before{
 
 .content .library .library-item img{
     position: absolute;
-    border-radius: 10px;
+    border-radius: 5px;
     top: 0;
     left: 0;
     width: 100%;
@@ -196,7 +196,7 @@ ul li a:hover::before{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.7);
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,7 +242,7 @@ section{
     top: 0;
     left: 0;
     width: 100%;
-    /*height: 100%;*/
+    height: 100%;
     background-color: rgba(0,0,0,0.7);
     display: none;
     justify-content: center;
@@ -252,7 +252,7 @@ section{
 
 .focus img{
     width: 50%;
-    height: 50%;
+    /*height: 50%;*/
     object-fit: contain;
 }
 
