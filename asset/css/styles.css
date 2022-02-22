@@ -20,6 +20,10 @@
     }
 }
 
+body{
+    height: 100%;
+}
+
 
 .bar{
     display: flex;
@@ -156,12 +160,102 @@ ul li a:hover::before{
 .content .library .library-item{
     display: flex;
     width: 90%;
-    background-color: aqua;
     border-radius: 10px;
     height: 250px;
     margin: 10px auto;
     gap: 2rem;
+    position: relative;
 }
+
+.content .library .library-item img{
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/*.select-click{*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    color: transparent;*/
+/*    z-index: 1000;*/
+/*}*/
+
+
+
+.content .library .library-item .be-full{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.content .library .library-item .be-full:hover{
+    opacity: 1;
+}
+
+.rc-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: white;
+    transition: width 0.5s;
+    white-space: nowrap;
+}
+
+
+
+.content .library .library-item .be-full:hover .rc-text{
+    width: 100%;
+}
+
+
+section{
+    display: none;
+}
+
+.focus{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.focus img{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
 
 @media screen and (max-width: 400px){
     .content .library{
